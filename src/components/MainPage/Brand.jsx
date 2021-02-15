@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import nautique from '../../variables/paragong23.jpg'
+import {Link} from 'gatsby'
 
 import {StyledLink} from '../SharedComponents/Navigation'
 
@@ -10,20 +10,22 @@ import * as palette from '../../variables/Variables'
 
 import paragon23 from '../../assets/photos/paragon-23profile.png'
 import paragon25 from '../../assets/photos/paragong25.png'
+import SANg21 from '../../assets/photos/g21superAirNautique.png'
+import SANg23 from '../../assets/photos/g23superairnautique.png'
+import SANg25 from '../../assets/photos/superairg25.png'
+import SAN210 from '../../assets/photos/superairnautique210.png'
+import SAN230 from '../../assets/photos/superairnautique230.png'
 
 const Brand = (props) => {
   return(
     <Section>
-      <InfoBox>
-        Wkaeside marine is your leading retailer for boats
-      </InfoBox>
        <InfoBox>
         <TextBox>
         <Letter>{props.letter}</Letter>
           <SubHeading>{props.title}</SubHeading>
           <SubTitle>Sporting Just Got Better</SubTitle>
           <Text>{props.text}</Text>
-          <Link >Shop Now</Link>
+          <ShopLink >Shop Now</ShopLink>
           
           </TextBox>
           
@@ -31,19 +33,43 @@ const Brand = (props) => {
         
       </InfoBox>
     <Box>
-      <Title>{props.title}</Title>
+      <SubTitle>{props.subtitle1}</SubTitle>
       <SubHeading>Models</SubHeading>
-      <InfoBox>
+{/*      
+      <SubTitle>{props.subtitle1}</SubTitle> */}
         <List>
-          <SubTitle>{props.subtitle1}</SubTitle>
-          <Model src={paragon23} />
-          <SubHeading>G23 Paragon</SubHeading>
-          <Model src={paragon25}/>
+          <Item>
+            <Model src={paragon23} />
+            <SubHeading>G23 Paragon</SubHeading>
+          </Item>
+          <Item>
+            <Model src={paragon25}/>
             <SubHeading>G25 Paragon</SubHeading>
-            <SubHeading>Paragon G23</SubHeading>
-            <SubHeading>Paragon G23</SubHeading>
+           </Item>
+           <Item>
+            <Model src={SANg21} />
+            <SubHeading>G21</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg23} />
+            <SubHeading>G23</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg25} />
+            <SubHeading>G25</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN210} />
+            <SubHeading>210</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN230} />
+            <SubHeading>230</SubHeading>
+          </Item>
         </List>
-        <List>
+    
+    
+        {/* <List>
           <SubTitle>{props.subtitle2}</SubTitle>
           <SubHeading>Paragon G23</SubHeading>
             <SubHeading>Paragon G23</SubHeading>
@@ -53,10 +79,10 @@ const Brand = (props) => {
         <SubTitle>{props.subtitle3}</SubTitle>
         {props.subtitle4 ? <SubTitle>{props.subtitle4}</SubTitle> : null} 
         {props.subtitle5 ?<SubTitle>{props.subtitle5}</SubTitle> : null}
-      </InfoBox>
+      
       <InfoBox>
         
-      </InfoBox>
+      </InfoBox> */}
     </Box>
       {/* <InfoBox>
         <TextBox>
@@ -112,9 +138,9 @@ const Letter = styled.h1`
 
 const List = styled.section`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: space-between;
+  justify-content: space-around;
 `
 
 const Image = styled.img`
@@ -123,7 +149,7 @@ const Image = styled.img`
   position: relative;
   z-index: 3;
 `
-const Link = styled(StyledLink)`
+const ShopLink = styled(StyledLink)`
   margin: 0;
   padding: 0;
   z-index:3;
@@ -136,6 +162,19 @@ const Link = styled(StyledLink)`
     width: 4rem;
     margin: 0 1rem 0 0;
     transform: translateY(-2px);
+  }
+`
+const Item = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: .5s;
+
+  :hover{
+    transform: scale(1.1);
   }
 `
 const Model = styled.img`

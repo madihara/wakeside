@@ -8,13 +8,16 @@ export const DARK_GREY = '#6D6D6D'
 export const Title = styled.h1`
   padding: 2px 0;
   margin: 0;
+  font-size: 2rem;
 `
 
 export const SubTitle = styled.h2`
   position: relative;
   z-index: 3;
   padding: 0;
+  display: block;
   margin-top: 1rem;
+  
 `
 
 export const SubHeading = styled.h3`
