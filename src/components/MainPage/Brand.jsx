@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
@@ -15,9 +15,14 @@ import SANg23 from '../../assets/photos/g23superairnautique.png'
 import SANg25 from '../../assets/photos/superairg25.png'
 import SAN210 from '../../assets/photos/superairnautique210.png'
 import SAN230 from '../../assets/photos/superairnautique230.png'
+import barlettamain from '../../assets/photos/barletta.jpg'
+import southbaymain from '../../assets/photos/southbaymain.jpg'
 
 const Brand = (props) => {
+
+  const [active, setActive] = useState({name:'wake and surf'})
   return(
+    <>
     <Section>
        <InfoBox>
         <TextBox>
@@ -33,7 +38,14 @@ const Brand = (props) => {
         
       </InfoBox>
     <Box>
-      <SubTitle>{props.subtitle1}</SubTitle>
+      <BoxLinks>
+        <SubTitle>{props.subtitle1}</SubTitle>
+        {/* <SubTitle 
+            onClick={() => setActive({
+                name: `multi-sport`
+              })}>Multi-Sport</SubTitle>
+        <SubTitle>Ski</SubTitle> */}
+      </BoxLinks>
       <SubHeading>Models</SubHeading>
 {/*      
       <SubTitle>{props.subtitle1}</SubTitle> */}
@@ -67,36 +79,126 @@ const Brand = (props) => {
             <SubHeading>230</SubHeading>
           </Item>
         </List>
-    
-    
-        {/* <List>
-          <SubTitle>{props.subtitle2}</SubTitle>
-          <SubHeading>Paragon G23</SubHeading>
-            <SubHeading>Paragon G23</SubHeading>
-            <SubHeading>Paragon G23</SubHeading>
-            <SubHeading>Paragon G23</SubHeading>
-        </List>
-        <SubTitle>{props.subtitle3}</SubTitle>
-        {props.subtitle4 ? <SubTitle>{props.subtitle4}</SubTitle> : null} 
-        {props.subtitle5 ?<SubTitle>{props.subtitle5}</SubTitle> : null}
-      
-      <InfoBox>
-        
-      </InfoBox> */}
     </Box>
-      {/* <InfoBox>
+    </Section>
+    <Section style={{paddingTop: '0'}}>
+
+    <InfoBox>
+      <ImageLeft src={barlettamain}/>
+        <TextBoxRight>
+        <LetterRight>B</LetterRight>
+          <SubHeading>Barletta</SubHeading>
+          <SubTitle>Refined Luxury</SubTitle>
+          <Text>From the keel up, Barletta designed its boats with your on-water experience in mind. They have taken advantage of every opportunity to simplify the process of building and purchasing a pontoon boat. Items that SHOULD be standard on a pontoon boat, ARE standard on a Barletta Pontoon Boat. In fact, Barletta Pontoon Boats have the most standard amenities in the industry...with just the right amount of options.</Text>
+          <ShopLink >Shop Now</ShopLink>
+          
+          </TextBoxRight>
+          
+       
+        
+      </InfoBox>
+    {/* <Box>
+      <BoxLinks>
+        <SubTitle>{props.subtitle1}</SubTitle>
+        <SubTitle 
+            onClick={() => setActive({
+                name: `multi-sport`
+              })}>Multi-Sport</SubTitle>
+        <SubTitle>Ski</SubTitle>
+      </BoxLinks>
+      <SubHeading>Models</SubHeading>
+
+        <List>
+          <Item>
+            <Model src={paragon23} />
+            <SubHeading>G23 Paragon</SubHeading>
+          </Item>
+          <Item>
+            <Model src={paragon25}/>
+            <SubHeading>G25 Paragon</SubHeading>
+           </Item>
+           <Item>
+            <Model src={SANg21} />
+            <SubHeading>G21</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg23} />
+            <SubHeading>G23</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg25} />
+            <SubHeading>G25</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN210} />
+            <SubHeading>210</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN230} />
+            <SubHeading>230</SubHeading>
+          </Item>
+        </List>
+    </Box> */}
+  </Section>
+  <Section style={{borderBottom: "none", paddingTop: "0"}}>
+
+    <InfoBox>
         <TextBox>
-        <Letter>N</Letter>
-          <SubTitle>Sporting Just Got Better</SubTitle>
-          <Text>{props.text}</Text>
-          <Link >Shop Now</Link>
+        <Letter>S</Letter>
+          <SubHeading>South Bay</SubHeading>
+          <SubTitle>A Lifestyle You'll Love</SubTitle>
+          <Text>From the keel up, Barletta designed its boats with your on-water experience in mind. They have taken advantage of every opportunity to simplify the process of building and purchasing a pontoon boat. Items that SHOULD be standard on a pontoon boat, ARE standard on a Barletta Pontoon Boat. In fact, Barletta Pontoon Boats have the most standard amenities in the industry...with just the right amount of options.</Text>
+          <ShopLink >Shop Now</ShopLink>
           
           </TextBox>
           
-        <Image src={props.image1} />
+          <Image src={southbaymain}/>
         
-      </InfoBox> */}
-      </Section>
+      </InfoBox>
+    {/* <Box>
+      <BoxLinks>
+        <SubTitle>{props.subtitle1}</SubTitle>
+        <SubTitle 
+            onClick={() => setActive({
+                name: `multi-sport`
+              })}>Multi-Sport</SubTitle>
+        <SubTitle>Ski</SubTitle>
+      </BoxLinks>
+      <SubHeading>Models</SubHeading>
+
+        <List>
+          <Item>
+            <Model src={paragon23} />
+            <SubHeading>G23 Paragon</SubHeading>
+          </Item>
+          <Item>
+            <Model src={paragon25}/>
+            <SubHeading>G25 Paragon</SubHeading>
+           </Item>
+           <Item>
+            <Model src={SANg21} />
+            <SubHeading>G21</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg23} />
+            <SubHeading>G23</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SANg25} />
+            <SubHeading>G25</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN210} />
+            <SubHeading>210</SubHeading>
+          </Item>
+          <Item>
+            <Model src={SAN230} />
+            <SubHeading>230</SubHeading>
+          </Item>
+        </List>
+    </Box> */}
+  </Section>
+  </>
   )
 }
 
@@ -109,6 +211,10 @@ const Section = styled.div`
 
 const Box = styled.div`
  /* margin: 5rem 0; */
+`
+const BoxLinks = styled.section`
+  display: flex;
+  justify-content: space-between;
 `
 
 
@@ -123,7 +229,11 @@ const TextBox=styled.section`
   /* margin: 0 5rem 0 10rem; */
   position: relative;
   height: 100%;
-  margin-right: 10px;
+  margin-right: 30px;
+`
+
+const TextBoxRight = styled(TextBox)`
+  margin: 0 0 0 40px;
 `
 const Letter = styled.h1`
   font-size: 35rem;
@@ -134,6 +244,10 @@ const Letter = styled.h1`
   top: -8rem;
   color: #fff;
   z-index: 1;
+`
+const LetterRight = styled(Letter)`
+  left: 18rem;
+ 
 `
 
 const List = styled.section`
@@ -148,6 +262,11 @@ const Image = styled.img`
   height: 400px;
   position: relative;
   z-index: 3;
+`
+
+const ImageLeft = styled(Image)`
+  margin: 0 0 0 -180px;
+  height: 430px;
 `
 const ShopLink = styled(StyledLink)`
   margin: 0;

@@ -21,10 +21,14 @@ const HeroBox = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 8rem;
+  width: 100%;
+  position: relative;
 `
 const Image = styled.img`
-  width: 77vw;
-  height: 450px;
+  height: 480px;
+  max-width: 74vw;
+  object-fit: cover;
+ 
 `
 
 export default Hero;

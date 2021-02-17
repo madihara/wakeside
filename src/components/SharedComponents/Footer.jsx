@@ -134,6 +134,10 @@ const StyledLink = styled(Link)`
   font-size: 0.8rem;
   cursor: pointer;
   padding: 1px 0;
+
+  :hover{
+    color: white;
+  }
 `
 
 const Copyright = styled.section`
